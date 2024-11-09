@@ -1,0 +1,84 @@
+What is the output of the following C++ code?
+int x = 5;
+cout << x++ << " " << ++x;
+a) 5 7
+b) 6 7
+c) 5 6
+d) 6 5
+a
+x++ prints the current value of x (5) then increments it to 6. ++x increments it to 7 and then prints it.
+
+Which of the following is a valid C variable name?
+a) int
+b) case
+c) my_var
+d) 123var
+c
+Variable names cannot start with numbers, and 'int' and 'case' are reserved keywords.
+
+What is the correct syntax to output "Hello, World!" in C?
+a) System.out.println("Hello, World!");
+b) Console.WriteLine("Hello, World!");
+c) printf("Hello, World!");
+d) cout << "Hello, World!";
+c
+The printf function is used in C for printing text to the console.
+
+Which of the following data types is used to create a floating-point variable?
+a) int
+b) char
+c) float
+d) bool
+c
+The float data type is used for storing decimal or floating-point numbers.
+
+What will be the result of 15 / 4 in C if both numbers are integers?
+a) 3.75
+b) 3
+c) 4
+d) 3.0
+b
+Integer division in C truncates the decimal, leaving only the integer part.
+
+Which function is used to get input from the user in C?
+a) printf
+b) cin
+c) scanf
+d) get_input
+c
+scanf is used to read formatted input from the user in C.
+
+Which operator is used to get the address of a variable in C?
+a) *
+b) &
+c) %
+d) #
+b
+The ampersand (&) operator is used to get the memory address of a variable.
+
+Which of the following will correctly declare a pointer in C?
+a) int p;
+b) int *p;
+c) *p;
+d) int p*;
+b
+int *p declares a pointer to an integer in C.
+
+Which library must be included for using input/output functions in C++?
+a) stdlib.h
+b) cstring
+c) iostream
+d) math.h
+c
+The iostream library includes the functions for input/output in C++ like cin and cout.
+
+What does the following code output?
+int x = 10;
+x += 5;
+cout << x;
+a) 10
+b) 5
+c) 15
+d) 20
+c
+The += operator adds 5 to the original value of x, resulting in x = 15.

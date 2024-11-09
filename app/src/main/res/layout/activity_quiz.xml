@@ -1,0 +1,170 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:fitsSystemWindows="true"
+    tools:context=".ReviewActivity">
+
+    <!-- ScrollView for scrolling content -->
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/navigation_layout"
+        android:paddingBottom="16dp"
+        android:clipToPadding="false">
+
+        <LinearLayout
+            android:id="@+id/quiz_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="20dp">
+
+            <!-- Question Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                app:cardBackgroundColor="@color/darkBlue"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp">
+
+                <TextView
+                    android:id="@+id/question"
+                    android:layout_margin="15dp"
+                    android:textColor="@color/white"
+                    android:textAppearance="?textAppearanceBodyLarge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Question" />
+            </androidx.cardview.widget.CardView>
+
+            <!-- Option Cards -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_opt1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:cardCornerRadius="10dp"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:id="@+id/option1"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="10dp"
+                    android:textAppearance="?textAppearanceBodyLarge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Option 1" />
+            </androidx.cardview.widget.CardView>
+
+            <!-- Repeat similar CardView for other options -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_opt2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:cardCornerRadius="10dp"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:id="@+id/option2"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="10dp"
+                    android:textAppearance="?textAppearanceBodyLarge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Option 2" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_opt3"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:cardCornerRadius="10dp"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:id="@+id/option3"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="10dp"
+                    android:textAppearance="?textAppearanceBodyLarge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Option 3" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_opt4"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:cardCornerRadius="10dp"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:id="@+id/option4"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="10dp"
+                    android:textAppearance="?textAppearanceBodyLarge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Option 4" />
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Navigation layout positioned below the scroll view -->
+    <LinearLayout
+        android:id="@+id/navigation_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:clipToPadding="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/pre_btn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textSize="18sp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:text="Previous"
+                android:backgroundTint="@color/darkBlue"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/nxt_btn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textSize="18sp"
+                android:layout_height="wrap_content"
+                android:text="Next"
+                android:backgroundTint="@color/darkBlue" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/sub_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:text="submit"
+            android:textSize="20sp"
+            android:backgroundTint="@color/darkBlue"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+</RelativeLayout>

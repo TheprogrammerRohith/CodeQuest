@@ -1,0 +1,142 @@
+What will be the output of the following Java code?
+int x = 5;
+System.out.println(x++ + ++x);
+a) 5
+b) 6
+c) 7
+d) 11
+d
+x++ increments `x` after printing, so `x++` prints 5, and `++x` increments `x` to 7 before printing.
+
+What will be the output of the following code?
+String s = "Hello";
+s = s.concat(" World");
+System.out.println(s == "Hello World");
+a) true
+b) false
+c) Compilation error
+d) Runtime exception
+b
+The `concat` method creates a new String object, so `s` points to a different object than the literal "Hello World".
+
+What is the result of the following code?
+public class Test {
+    public static void main(String[] args) {
+        int x = 5;
+        int y = 10;
+        System.out.println(x == y++ && ++x == 6);
+    }
+}
+a) true
+b) false
+c) Compilation error
+d) Runtime exception
+b
+The first part `x == y++` is false (5 != 10), and since it’s a short-circuit AND, the second part isn't evaluated.
+
+What is the output of this Java code?
+public class Test {
+    public static void main(String[] args) {
+        String str = "java";
+        str = str.toUpperCase().substring(1);
+        System.out.println(str);
+    }
+}
+a) JAV
+b) JAVA
+c) java
+d) Exception in thread "main" java.lang.NullPointerException
+a
+`toUpperCase()` changes the string to "JAVA", and `substring(1)` removes the first character, leaving "JAV".
+
+What will the following code output?
+int[] arr = {1, 2, 3};
+arr = null;
+System.out.println(arr[0]);
+a) 1
+b) NullPointerException
+c) Compilation error
+d) ArrayIndexOutOfBoundsException
+b
+After setting `arr` to null, accessing any element results in a `NullPointerException`.
+
+What will the following Java code print?
+public class Test {
+    public static void main(String[] args) {
+        int x = 5;
+        int y = 10;
+        if (x == 5) {
+            y = 20;
+        }
+        System.out.println(x + " " + y);
+    }
+}
+a) 5 10
+b) 5 20
+c) 5 5
+d) Compilation error
+b
+The `if` condition sets `y = 20`, so the output is "5 20".
+
+What will be the result of the following code?
+public class Test {
+    public static void main(String[] args) {
+        Integer i = 128;
+        Integer j = 128;
+        System.out.println(i == j);
+    }
+}
+a) true
+b) false
+c) Compilation error
+d) NullPointerException
+b
+Integer caching works for values between -128 and 127. Since 128 is outside that range, new Integer objects are created, so `i == j` is false.
+
+What will the following code print?
+public class Test {
+    public static void main(String[] args) {
+        int a = 1;
+        int b = 2;
+        System.out.println(a > b ? ++a : ++b);
+    }
+}
+a) 2
+b) 3
+c) 1
+d) Compilation error
+b
+Since `a > b` is false, the second expression `++b` is evaluated, which increments `b` to 3 before printing.
+
+What is the output of the following code?
+public class Test {
+    public static void main(String[] args) {
+        int x = 1;
+        int y = 1;
+        int z = 1;
+        if (x == 1 && y == 1 || z == 2) {
+            System.out.println("Hello");
+        }
+    }
+}
+a) Hello
+b) Compilation error
+c) NullPointerException
+d) No output
+a
+The condition `x == 1 && y == 1 || z == 2` evaluates to true, as the first part `x == 1 && y == 1` is true.
+
+What will the output of the following Java code be?
+public class Test {
+    public static void main(String[] args) {
+        StringBuilder sb = new StringBuilder("Hello");
+        sb.append(" World").reverse();
+        System.out.println(sb);
+    }
+}
+a) olleH World
+b) Hello World
+c) World Hello
+d) Compilation error
+b
+The `reverse()` method modifies the StringBuilder in-place, but the result is not stored. Therefore, only "Hello World" is printed.

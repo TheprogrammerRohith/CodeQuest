@@ -1,0 +1,142 @@
+What is the output of the following code?
+int x = 5;
+int y = x++ * --x + ++x - x--;
+cout << y;
+a) 5
+b) 10
+c) 6
+d) Undefined behavior
+d
+This expression has undefined behavior in C/C++ due to multiple unsequenced modifications of x within the same statement.
+
+What will be the output of the following code?
+void func(int& x) { x = 10; }
+int main() {
+    int a = 5;
+    int* p = &a;
+    func(*p);
+    cout << a;
+}
+a) 5
+b) 10
+c) Compiler error
+d) Undefined behavior
+b
+func modifies the value of a through a reference parameter, setting it to 10. So, the output is 10.
+
+Consider the following code. What will be the output?
+int x = 5;
+int y = x++ + x++ * --x;
+cout << y;
+a) 25
+b) 30
+c) 27
+d) Undefined behavior
+d
+The code causes undefined behavior due to modifying x multiple times within the same expression without sequencing.
+
+What will be the output of this code?
+int x = 1;
+x = x++ + ++x * x++;
+cout << x;
+a) 7
+b) 9
+c) Undefined behavior
+d) 5
+c
+The expression modifies x multiple times without sequencing, resulting in undefined behavior.
+
+What will the following code output?
+int arr[] = {10, 20, 30, 40};
+int* p = (int*)((char*)arr + 2);
+cout << *p;
+a) 10
+b) 20
+c) Undefined behavior
+d) Compiler error
+c
+Casting to `char*` and offsetting by 2 bytes misaligns the pointer, causing undefined behavior.
+
+What will be the output of the following code?
+void foo(int a, int b = 0) {
+    cout << "First\n";
+}
+void foo(int a) {
+    cout << "Second\n";
+}
+int main() {
+    foo(10);
+}
+a) First
+b) Second
+c) Compiler error
+d) Undefined behavior
+c
+Function overloading ambiguity occurs as `foo(10)` matches both `foo(int)` and `foo(int, int = 0)`, leading to a compilation error.
+
+What is the output of this code?
+void func(int a, int b) {
+    if (b == 0)
+        throw "Divide by zero!";
+    cout << a / b;
+}
+int main() {
+    try {
+        func(5, 0);
+    } catch (const char* e) {
+        cout << e;
+    }
+}
+a) Divide by zero!
+b) 0
+c) Runtime error
+d) Compiler error
+a
+A divide-by-zero attempt in func throws an exception caught by the main function, printing "Divide by zero!".
+
+What will be the output of this code?
+int main() {
+    int a = 5;
+    const int* p = &a;
+    int* q = const_cast<int*>(p);
+    *q = 10;
+    cout << a;
+}
+a) 5
+b) 10
+c) Compiler error
+d) Undefined behavior
+d
+Modifying a variable through a const pointer using `const_cast` results in undefined behavior.
+
+What does the following code print?
+class A {
+public:
+    virtual void func() { cout << "A"; }
+};
+class B : public A {
+public:
+    void func() override { cout << "B"; }
+};
+int main() {
+    A* obj = new B();
+    delete obj;
+    obj->func();
+}
+a) A
+b) B
+c) Runtime error
+d) Undefined behavior
+d
+Accessing `obj` after deleting it results in undefined behavior, as the memory was freed.
+
+What is the output of the following code?
+int a = 3, b = 4;
+int x = (a++ > b) ? a : b++;
+cout << x << " " << a << " " << b;
+a) 4 4 4
+b) 5 4 4
+c) 4 4 5
+d) Undefined behavior
+c
+The condition (a++ > b) is false (3 > 4), so x = b++ (4), a = 4, b increments to 5.

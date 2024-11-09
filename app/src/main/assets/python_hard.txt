@@ -1,0 +1,98 @@
+What is the time complexity of accessing an element in a list?
+a) O(1)
+b) O(n)
+c) O(log n)
+d) O(n^2)
+a
+Accessing an element by index in a list is an O(1) operation because lists are stored in contiguous memory locations, allowing direct access.
+
+What will the output of the following code be?
+x = [1, 2, 3]
+y = x
+y.append(4)
+print(x)
+a) [1, 2, 3]
+b) [1, 2, 3, 4]
+c) [4, 1, 2, 3]
+d) Error
+b
+In Python, x and y are references to the same list. Modifying y affects x as they point to the same object in memory.
+
+Which of the following is used to create a virtual environment in Python?
+a) virtualenv
+b) envcreate
+c) pyenv
+d) venv
+a
+virtualenv is a tool for creating isolated Python environments. Although venv is also correct, the question asks for a tool, and virtualenv is more widely known as a package for creating virtual environments.
+
+What is the output of the following code?
+x = {1, 2, 3}
+x.add(2)
+print(x)
+a) {1, 2, 3}
+b) {1, 2}
+c) {1, 2, 3, 2}
+d) Error
+a
+Sets in Python only contain unique elements. Adding 2 again doesn't change the set since it already contains 2.
+
+What does the following code return?
+list(map(str, [1, 2, 3]))
+a) ['1', '2', '3']
+b) ['1', '2', 3]
+c) [1, 2, 3]
+d) Error
+a
+The map function applies str() to each element in the list [1, 2, 3], converting each element to a string.
+
+What is the output of the following code?
+x = [1, 2, 3]
+print(x * 2)
+a) [1, 2, 3]
+b) [1, 2, 3, 1, 2, 3]
+c) [2, 3]
+d) Error
+b
+Multiplying a list by 2 in Python repeats the list elements twice, resulting in [1, 2, 3, 1, 2, 3].
+
+What will be the output of the following code?
+def add(*args):
+    return sum(args)
+print(add(1, 2, 3))
+a) 6
+b) 5
+c) 3
+d) Error
+a
+The *args syntax allows you to pass a variable number of arguments to the function. The sum function adds them together, returning 6.
+
+What does the following code print?
+for i in range(3):
+    print(i, end=' ')
+print()
+a) 0 1 2
+b) 0 1 2 
+c) 1 2 3
+d) Error
+a
+The range(3) generates numbers 0, 1, and 2. The end=' ' in the print statement ensures the values are printed on the same line with a space between them.
+
+Which of the following is not a built-in data type in Python?
+a) List
+b) Tuple
+c) Array
+d) Dictionary
+c
+Lists, tuples, and dictionaries are all built-in Python data types. Arrays are not a native Python data type but can be implemented using the array module or through external libraries like numpy.
+
+def test(x, func):
+    return func(x)
+print(test(5, lambda x: x * x))
+print(test(3, lambda x: x + 10))
+a) 25 13
+b) 25 3
+c) Error
+d) 5 10
+a
+This code demonstrates the use of a lambda function. The test function takes an argument x and another argument func, which is a function. The lambda expressions are used to define the behavior of func for different operations, i.e., squaring and adding 10.

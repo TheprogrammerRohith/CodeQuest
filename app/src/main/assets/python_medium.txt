@@ -1,0 +1,96 @@
+What will be the output of the following code?
+x = [1, 2, 3, 4]
+print(x + [5, 6])
+a) [1, 2, 3, 4, 5, 6]
+b) [1, 2, 3, 4]
+c) Error
+d) [5, 6]
+a
+The + operator concatenates two lists. Here, it adds [5, 6] to the list x which contains [1, 2, 3, 4], resulting in [1, 2, 3, 4, 5, 6].
+
+Which of the following methods is used to remove an item from a list by value?
+a) remove()
+b) delete()
+c) pop()
+d) discard()
+a
+The remove() method removes the first occurrence of the specified value from the list. The other methods listed (delete(), pop(), discard()) either don't exist or behave differently
+
+What does the following code print?
+x = {1, 2, 3}
+print(3 in x)
+a) True
+b) False
+c) Error
+d) None
+a
+The expression 3 in x checks whether 3 is an element in the set x, and since it is, the output will be True.
+
+What is the output of the following code?
+def func(a, b):
+    return a * b
+print(func(3, 4))
+a) 7
+b) 12
+c) 14
+d) 15
+c
+The function func(a, b) multiplies the values of a and b. When 3 and 4 are passed, the result is 3 * 4 = 12.
+
+What is the result of the following expression?
+len('Hello, World!')
+a) 12
+b) 13
+c) 14
+d) 15
+b
+The len() function returns the number of characters in the string, including spaces and punctuation. The string 'Hello, World!' has 13 characters.
+
+Which of the following is used to handle exceptions in Python?
+a) try-catch
+b) try-except
+c) catch-finally
+d) handle-exception
+b
+In Python, the try-except block is used to handle exceptions. Other options like try-catch (used in other languages like Java) and catch-finally don't exist in Python.
+
+What will be the output of the following code?
+x = 'Hello'
+print(x[1:4])
+a) Hel
+b) ell
+c) Hello
+d) Error
+b
+The slice x[1:4] selects characters from index 1 to index 3 (not including 4). Hence, the output will be 'ell'.
+
+Which of the following is used to create a shallow copy of a list?
+a) copy()
+b) shallow()
+c) clone()
+d) duplicate()
+a
+The copy() method creates a shallow copy of a list, which means that changes to the copy won't affect the original list and vice versa. Other methods like shallow(), clone(), and duplicate() don't exist for lists.
+
+What will the following code output?
+x = 'abcdefg'
+print(x[::2])
+a) aceg
+b) abcd
+c) gfedcba
+d) error
+a
+The slice x[::2] skips every second character in the string, starting from index 0. Thus, the result will be 'aceg'.
+
+def foo(x, y=[]):
+    y.append(x)
+    return y
+print(foo(1))
+print(foo(2))
+a) [1] [2]
+b) [1] [1, 2]
+c) Error
+d) [1] [1]
+b
+The default argument y=[] is mutable and is only initialized once when the function is defined, not each time it's called. So, the list grows with each function call.
+

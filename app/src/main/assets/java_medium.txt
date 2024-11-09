@@ -1,0 +1,127 @@
+What will the following code print?
+int[] arr = {1, 2, 3, 4, 5};
+System.out.println(arr[5]);
+a) 5
+b) ArrayIndexOutOfBoundsException
+c) 4
+d) 3
+b
+Accessing arr[5] is out of bounds since the last index is 4.
+
+What is the result of this code?
+String str1 = "Java";
+String str2 = "Java";
+System.out.println(str1 == str2);
+a) true
+b) false
+c) Compiler error
+d) NullPointerException
+a
+`str1` and `str2` refer to the same object in the string pool.
+
+What does the following print?
+for (int i = 0; i < 5; i++) {
+    if (i == 3) break;
+    System.out.print(i);
+}
+a) 01234
+b) 012
+c) 3
+d) 0123
+b
+The loop breaks when `i` equals 3, so only 012 is printed.
+
+What will be the output of this code?
+String s = "Hello";
+s.concat(" World");
+System.out.println(s);
+a) Hello World
+b) Hello
+c) Compiler error
+d) NullPointerException
+b
+`concat` doesn’t change the original string; it creates a new one.
+
+What is the output of this code?
+int x = 5;
+int y = ++x * x--;
+System.out.println(y);
+a) 30
+b) 25
+c) 20
+d) 35
+a
+`++x` changes x to 6, and then `6 * 5` yields 30.
+
+What does the following code do?
+int x = 5;
+switch (x) {
+    case 5: System.out.print("Five");
+    case 6: System.out.print("Six");
+}
+a) FiveSix
+b) Five
+c) Compiler error
+d) Undefined behavior
+a
+No break statement, so execution falls through both cases.
+
+What is the output of this code?
+class Test {
+    static int x;
+    Test() { x++; }
+}
+public class Main {
+    public static void main(String[] args) {
+        Test t1 = new Test();
+        Test t2 = new Test();
+        System.out.println(Test.x);
+    }
+}
+a) 0
+b) 2
+c) 1
+d) Compiler error
+b
+The static variable `x` is incremented each time an object is created.
+
+What will this code output?
+System.out.println(Math.round(2.6) + Math.ceil(2.2));
+a) 5
+b) 4
+c) 3
+d) 2
+a
+`Math.round(2.6)` is 3 and `Math.ceil(2.2)` is 3, totaling 5.
+
+What will be the result?
+try {
+    int a = 5 / 0;
+} catch (ArithmeticException e) {
+    System.out.print("Error");
+}
+a) Runtime error
+b) Error
+c) 0
+d) Compiler error
+b
+Dividing by zero throws an exception, caught by the catch block.
+
+What is printed?
+class A {
+    public A() { System.out.print("A"); }
+}
+class B extends A {
+    public B() { System.out.print("B"); }
+}
+public class Main {
+    public static void main(String[] args) {
+        new B();
+    }
+}
+a) AB
+b) B
+c) Compiler error
+d) A
+a
+`B`’s constructor implicitly calls `A`’s constructor first.

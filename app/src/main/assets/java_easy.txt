@@ -1,0 +1,93 @@
+What is the output of the following code?
+int x = 5;
+System.out.println(x++ + " " + x);
+a) 5 6
+b) 6 6
+c) 5 5
+d) 6 5
+a
+x++ prints the current value of x (5) then increments it to 6.
+
+What will be the output of this code?
+String str = "Hello";
+System.out.println(str.length());
+a) 4
+b) 5
+c) 6
+d) Compiler error
+b
+The length of the string "Hello" is 5 characters.
+
+Which data type is used to store a single character in Java?
+a) char
+b) String
+c) int
+d) float
+a
+The `char` data type is used for storing single characters in Java.
+
+What does the following code print?
+int a = 10;
+a += 5;
+System.out.println(a);
+a) 10
+b) 5
+c) 15
+d) Compiler error
+c
+`a += 5` is shorthand for `a = a + 5`, so `a` becomes 15.
+
+What is the output of this code?
+System.out.println(5 > 3 && 8 > 6);
+a) true
+b) false
+c) 1
+d) Compiler error
+a
+Both conditions are true, so `&&` returns true.
+
+What will this code print?
+String str = "Java";
+System.out.println(str.equals("java"));
+a) true
+b) false
+c) Compiler error
+d) NullPointerException
+b
+`equals` is case-sensitive, so "Java" is not equal to "java".
+
+What is the output?
+System.out.println(Math.max(5, 10));
+a) 5
+b) 10
+c) Compiler error
+d) 0
+b
+Math.max returns the greater of two values, which is 10 here.
+
+What will be printed?
+String text = "Hello, World!";
+System.out.println(text.substring(0, 5));
+a) Hello
+b) World
+c) ello
+d) Compiler error
+a
+`substring(0, 5)` extracts characters from index 0 to 4.
+
+Which keyword is used to define a constant variable in Java?
+a) const
+b) final
+c) static
+d) constant
+b
+`final` is used to define constants in Java.
+
+What is the output?
+System.out.println(10 / 3);
+a) 3.33
+b) 3
+c) 10
+d) Compiler error
+b
+Integer division truncates the decimal, so the output is 3.

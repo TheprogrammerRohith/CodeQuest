@@ -1,0 +1,109 @@
+What is the output of the following C++ code?
+int x = 10;
+int y = x++ + ++x;
+cout << x << " " << y;
+a) 10 21
+b) 12 21
+c) 11 20
+d) 12 20
+b
+x++ evaluates to 10, then increments to 11; ++x then increments x to 12, so y = 10 + 11 = 21, and x is 12.
+
+What will be the output of the following code?
+int x = 3;
+int y = 5;
+cout << (x & y) << " " << (x | y);
+a) 1 7
+b) 2 6
+c) 0 7
+d) 1 6
+a
+x & y performs a bitwise AND (001 & 101 = 001), giving 1. x | y performs a bitwise OR (001 | 101 = 111), giving 7.
+
+Which of the following expressions correctly checks if a variable x is within the range [10, 20]?
+a) if (x >= 10 || x <= 20)
+b) if (x > 10 && x < 20)
+c) if (10 <= x <= 20)
+d) if (x >= 10 && x <= 20)
+d
+The correct expression checks if x is greater than or equal to 10 and less than or equal to 20. 
+
+What will be the output of the following code?
+int arr[] = {1, 2, 3, 4, 5};
+cout << *(arr + 3);
+a) 1
+b) 2
+c) 3
+d) 4
+d
+*(arr + 3) points to the 4th element in the array (index 3), which is 4.
+
+What is the output of the following code?
+int a = 4;
+int b = a++ * ++a;
+cout << b;
+a) 16
+b) 20
+c) 25
+d) 24
+b
+a++ evaluates to 4 (then increments to 5), and ++a increments to 6, so b = 4 * 5 = 20.
+
+What is the output of this code?
+int x = 10;
+for (int i = 0; i < 3; i++) {
+    x += i;
+}
+cout << x;
+a) 13
+b) 10
+c) 16
+d) 12
+a
+x starts at 10, then adds 0, 1, and 2 in each iteration of the loop, resulting in x = 13.
+
+Given the following code, what will be the value of arr[2]?
+int arr[] = {5, 10, 15, 20};
+arr[2] = arr[1] * arr[3];
+a) 10
+b) 15
+c) 20
+d) 200
+d
+arr[2] is updated to arr[1] * arr[3], which is 10 * 20 = 200.
+
+What will be the output of this code?
+int x = 8, y = 5;
+if (x > 5 && y < 10) x++;
+else y--;
+cout << x << " " << y;
+a) 8 4
+b) 8 5
+c) 9 5
+d) 9 4
+c
+Since x > 5 and y < 10, the condition is true, so x is incremented to 9, and y remains 5.
+
+What will be printed by the following code?
+int i = 5;
+int j = i++ + ++i;
+cout << i << " " << j;
+a) 7 11
+b) 6 10
+c) 6 12
+d) 7 12
+d
+i++ is 5 (then increments to 6), ++i increments i to 7, so j = 5 + 7 = 12, and i is now 7.
+
+What is the output of the following code snippet?
+int i = 1;
+while (i <= 3) {
+    cout << i << " ";
+    i++;
+}
+a) 1 1 1
+b) 1 2 3
+c) 1 2
+d) 1
+b
+The loop iterates while i is less than or equal to 3, printing 1, 2, and 3 sequentially.
